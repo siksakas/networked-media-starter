@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.blueprint-wrapper {
+  position: relative;
+  width: 90vw;
+  max-width: 1200px;
+}
+
+.blueprint-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1 {
+  position: absolute;
+  color: white;
+  bottom: 90px;
+}
+
+.description {
+  position: absolute;
+  bottom: 0px;
+  font-size: 15px;
+  left: 20px;
+  color: white;
+  max-width: 400px;
+}
+
+.description p {
+  margin: 5px 0;
+}
+
+.room {
+  position: absolute;
+  color: red;
+}
+
+.room1 {
+  top: 14%;
+  left: 86.8%;
+}
+
+.room2 {
+  top: 14%;
+  left: 50.7%;
+}
+
+.room3 {
+  top: 34%;
+  left: 49.2%;
+}
+
+.room4 {
+  top: 28%;
+  left: 89%;
+}
+
+.room5 {
+  top: 42.5%;
+  left: 78%;
+}
+
+.room6 {
+  top: 58%;
+  left: 79%;
+}
+
+.room7 {
+  top: 14%;
+  left: 31%;
+}
+
+.bathroom {
+  color: white;
+  top: 45.5%;
+  left: 64%;
+}
+
+.hallway {
+  top: 25.5%;
+  left: 64%;
+}
+
+.sbedroom {
+  color: white;
+  top: 16.5%;
+  left: 76%;
+}
+
+.bathroom1 {
+  color: white;
+  top: 31%;
+  left: 28.3%;
+}
+
+.bathroom2 {
+  color: white;
+  top: 42.3%;
+  left: 12%;
+}
+
+.closet {
+  color: white;
+  top: 27.5%;
+  left: 12.5%;
+}
+
+.entrance {
+  color: white;
+  top: 70.5%;
+  left: 49.5%;
+}
