@@ -1,0 +1,7 @@
+.post {
+    width: 80%;
+}
+.post > img {
+    max-width: 100%;
+    /*sets img to be same width as parent container*/
+}
