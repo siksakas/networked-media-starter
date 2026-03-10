@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:wght@400;500;700&display=swap");
+
+body {
+  margin: 0;
+  background-color: #000;
+  height: 100%;
+}
+
+.container {
+  margin: 0;
+}
+
+.home-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  padding: 22px 24px 18px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: clamp(22px, 7vw, 110px);
+  border-bottom: 2px solid #ffffff;
+  flex-wrap: wrap;
+  background-color: #0a0202;
+}
+
+.navbar a {
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transform: skewX(-8deg);
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.navbar a:hover {
+  color: #ff2b2b;
+}
+
+.home-poster-layout {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.home-poster-stuff {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.home-poster-logo {
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+}
+
+.home-poster-title {
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2rem, 4.2vw, 3.5rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transform: skewX(-8deg);
+  margin-bottom: 0px;
+}
+.text {
+  margin-top: -180px;
+  text-align: center;
+
+}
+.home-poster-subtitle {
+  color: #ea1d1d;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.2rem, 2.4vw, 2rem);
+
+  text-transform: uppercase;
+  transform: skewX(-8deg);
+
+  margin-top: 0px;
+}
+
+.home-bg {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url("/assets/image.png");
+  background-size: cover;
+}
+
+.home-main {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.home-main {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.home-video-pane {
+  min-height: 100%;
+  display: flex;
+}
+
+.home-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
+  background: #111;
+}
+
+.home-logo {
+  width: 35vw;
+  height: auto;
+  margin-bottom: 36px;
+}
+
+.title {
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2.8rem, 4vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  transform: skewX(-8deg);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  color: #ea1d1d;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2.1rem, 3.4vw, 3.2rem);
+  letter-spacing: 0.03em;
+  transform: skewX(-8deg);
+  margin: 12px 0 0;
+  text-transform: uppercase;
+}
+
+.post {
+  border: white solid 1px;
+  border-radius: 8px;
+  margin: 0;
+  padding: 14px;
+  background: #131313;
+  color: white;
+}
+.post h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.post p {
+  margin-bottom: 0;
+}
+
+.post-date {
+  margin: 6px 0 0;
+  color: #b8b8b8;
+  font-size: 0.9rem;
+}
+
+.post img {
+  width: min(100%, 500px);
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+.empty-state {
+  color: #cfcfcf;
+  margin: 0 0 14px;
+}
+.forum-container {
+  min-height: calc(100vh - 26px);
+}
+
+.forum-layout {
+  display: grid;
+  gap: 20px;
+  padding: 0 30px 30px;
+  max-width: 950px;
+  margin: 0 auto;
+  color: white;
+  font-family: "Roboto Mono", monospace;
+}
+
+.forum-intro {
+  margin-top: 10px;
+}
+
+.forum-title {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.forum-description {
+  margin: 8px 0 0;
+  color: #d5d5d5;
+}
+
+.forum-card {
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  background: #1b1b1b;
+  padding: 20px;
+}
+
+.forum-card h2 {
+  margin-top: 0;
+}
+
+.forum-form {
+  display: grid;
+  gap: 10px;
+}
+
+.forum-form input,
+.forum-form textarea,
+.forum-form button {
+  border-radius: 6px;
+  border: 1px solid #707070;
+  background: #101010;
+  color: white;
+  padding: 10px;
+}
+
+.forum-form textarea {
+  resize: vertical;
+}
+
+.forum-form button {
+  border: 1px solid white;
+  background: #efefef;
+  color: #121212;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.posts-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.posts-header p {
+  margin: 0;
+  color: #bebebe;
+}
+
+.posts {
+  display: grid;
+  gap: 12px;
+}
+
+.about-text-pane {
+  min-height: 100%;
+  overflow-y: auto;
+  padding: clamp(22px, 3vw, 42px);
+  display: grid;
+  gap: 16px;
+  align-content: start;
+  color: #f2f2f2;
+  font-family: "Roboto Mono", monospace;
+  line-height: 1.6;
+}
+
+.about-paragraph {
+  margin: 0;
+  font-size: clamp(0.98rem, 1.2vw, 1.1rem);
+}
+
+.about-main {
+  min-height: calc(100vh - 140px);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.about-image-pane,
+.about-video-pane {
+  min-height: 100%;
+  display: flex;
+}
+
+.about-image-pane {
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+}
+
+.about-photo {
+  width: 100%;
+  height: 45%;
+  object-fit: cover;
+}
+
+.schedule-container {
+  min-height: calc(100vh - 26px);
+}
+
+.schedule-layout {
+  display: grid;
+  gap: 20px;
+  padding: 0 30px 30px;
+  max-width: 980px;
+  margin: 0 auto;
+  color: white;
+  font-family: "Roboto Mono", monospace;
+}
+
+.schedule-intro {
+  margin-top: 10px;
+}
+
+.schedule-title {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.schedule-card {
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  background: #1b1b1b;
+  padding: 16px;
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.schedule-table th,
+.schedule-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.schedule-table th {
+  color: #ff2b2b;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.schedule-table tbody tr:hover {
+  background: #242424;
+}
+
+.site-footer {
+  border-top: 2px solid #ffffff;
+  background: #0a0202;
+  color: #f2f2f2;
+  padding: 18px 20px 22px;
+}
+
+.site-footer-content {
+  max-width: 980px;
+  /* this one like centers it by making equal space left n right */
+  margin: 0 auto;
+  text-align: center;
+  gap: 6px;
+  font-family: "Roboto Mono", monospace;
+}
+
+.site-footer-brand {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.site-footer-contact{
+  margin: 0;
+  font-size: 0.88rem;
+  color: #cfcfcf;
+}

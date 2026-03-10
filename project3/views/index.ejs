@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container home-container home-bg">
+      <%- include("./partials/nav.ejs") %>
+      <main class="home-poster-layout">
+        <section class="home-poster-stuff">
+          <img class="home-poster-logo" src="/assets/logo_white_transparent.png"/>
+          <section class="text">
+            <h1 class="home-poster-title">Shaolin Wushu Center</h1>
+            <p class="home-poster-subtitle">Los Angeles, California</p>
+          </section>
+
+        </section>
+      </main>
+    </div>
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

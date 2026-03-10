@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container home-container">
+        <%- include("./partials/nav.ejs") %>
+        <main class="home-main about-main">
+            <section class="about-text-pane" aria-label="About Shaolin Wushu Center">
+                <h1>History</h1>
+                <p class="about-paragraph">The Shaolin Wushu Center was originally founded in South Windsor, CT in 1997. However, after twelve years in CT, Master Hu and Zong decided to relocate the center to Los Angeles to be closer to their daughter.</p>
+
+                <p class="about-paragraph">Based in Los Angeles since 2009, the Shaolin Wushu Center offers a variety of classes in Kung Fu (Gong Fu) and Taiji (T'ai Chi) for athletes of all ages and abilities—from the novice to the seasoned international competitor-- and has trained thousands of students.</p>
+
+                <p class="about-paragraph">The Shaolin Wushu center has sponsored seven international wushu tournaments in Los Angeles and has organized 20 major cultural exchange events between China and the U.S. (which includes opportunities for our students to visit and train there).</p>
+
+                <p class="about-paragraph">Master Hu and his senior instructors lead the adult learner on a wonderous journey through the world of Wushu. Through diligence and practice (offered days, nights and weekends) the student will expect to develop top skills in many aspects of martial arts and health. There is no limit to how far a student can progress: from simple awareness of the self to able self defense practitioner to world champion Wushu practitioner. Training is available in many styles of open-hand and weapons traditions.</p>
+            </section>
+
+            <section class="about-image-pane" aria-label="Kung Fu training photos">
+                <img class="about-photo" src="/assets/kungfu/image-1.webp" />
+                <img class="about-photo" src="/assets/kungfu/image-2.webp" />
+            </section>
+
+            <section class="about-image-pane" aria-label="Featured video">
+                <img class="about-photo" src="/assets/kungfu/monkey+staff.webp" />
+                <img class="about-photo" src="/assets/kungfu/123123.webp" />
+            </section>
+
+            <section class="about-text-pane" aria-label="More about training and community">
+                <p class="about-paragraph">Classes are available in a wide variety of traditional and contemporary Chinese martial arts including: northern and southern fist, northern and southern staff, northern and southern broadsword, straight sword and 9-section chain-whip; mimetic animal styles such as praying mantis, snake and eagle; the health-enhancing arts of taiji and qigong; grappling and wrestling for self defense; and programs of stunt choreography and acting for martial arts films.</p>
+
+                <p class="about-paragraph">In conjunction with Master Hu’s yearly international exchange program, our students have the opportunity to visit and train in China to help to deepen their understanding of Chinese culture and martial arts. This is a unique experience that truly enriches our students' lives.</p>
+
+                
+            </section>
+        </main>
+    </div>
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>

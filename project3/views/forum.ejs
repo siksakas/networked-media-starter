@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container forum-container">
+        <%- include("./partials/nav.ejs") %>
+
+        <main class="forum-layout">
+            <section class="forum-intro">
+                <h1 class="forum-title">Community Forum</h1>
+                <p class="forum-description">Updates and announcements!</p>
+            </section>
+
+            <section class="forum-card form-card">
+                <h2>Create a Post</h2>
+                <form method="POST" action="/upload" enctype="multipart/form-data" class="forum-form">
+                    <label for="title">Title</label>
+                    <input id="title" type="text" name="title" placeholder="Post title" />
+
+                    <label for="text">Message</label>
+                    <input id="text" name="text" placeholder="Type here..." />
+
+                    <label for="file-upload">Image</label>
+                    <input id="file-upload" name="theimage" type="file" />
+
+                    <button type="submit">Publish Post</button>
+                </form>
+            </section>
+
+            <section class="forum-card posts-card">
+                <div class="posts-header">
+                    <h2>Recent Posts</h2>
+                    <p><%= posts.length %> post<%= posts.length === 1 ? '' : 's' %></p>
+                </div>
+
+                <div class="posts">
+                    <% for (let i = posts.length - 1; i >= 0; i--) { %>
+                        <% const post = posts[i]; %>
+                        <article class="post">
+                            <header>
+                                <h3><%= post.title %></h3>
+                                <p class="post-date"><%= post.date %></p>
+                            </header>
+                            <p><%= post.text %></p>
+                            <% if (post.image) { %>
+                                <img src="<%= post.image %>" />
+                            <% } %>
+                        </article>
+                    <% } %>
+                </div>
+            </section>
+        </main>
+    </div>
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>

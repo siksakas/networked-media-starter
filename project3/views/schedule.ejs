@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container schedule-container">
+        <%- include("./partials/nav.ejs") %>
+
+        <main class="schedule-layout">
+            <section class="schedule-intro">
+                <h1 class="schedule-title">Class Schedule</h1>
+            </section>
+
+            <section class="schedule-card" aria-label="Weekly class schedule">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Time</th>
+                            <th>Program</th>
+                            <th>Level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>6:00 PM – 7:30 PM</td>
+                            <td>Shaolin Fundamentals</td>
+                            <td>Beginner</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>7:00 PM – 8:30 PM</td>
+                            <td>Traditional Forms & Conditioning</td>
+                            <td>All Levels</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>6:00 PM – 7:30 PM</td>
+                            <td>Sanda & Sparring Skills</td>
+                            <td>Intermediate</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>7:00 PM – 8:00 PM</td>
+                            <td>Taiji & Mobility</td>
+                            <td>All Levels</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>10:00 AM – 12:00 PM</td>
+                            <td>Weapons & Performance Prep</td>
+                            <td>Advanced</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>
