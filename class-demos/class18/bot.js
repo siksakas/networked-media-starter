@@ -19,7 +19,7 @@ const makeStatus = async () => {
     
     const s = await masto.v1.statuses.create({
         status: emojis[randomSelection],
-        visibility: "public"
+        visibility: "public" //private for testing posts
     });
     console.log(s.url);
 }
