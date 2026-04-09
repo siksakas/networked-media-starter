@@ -49,7 +49,7 @@ const makeStatus = async () => {
     
     const s = await masto.v1.statuses.create({
         status: "Guess the word!\n" + clue+"\n the previous word was "+previousWord+".\n#wordgame",
-        visibility: "private" //private for testing posts
+        visibility: "public" //private for testing posts
     });
     console.log(s.url);
 }
@@ -76,7 +76,7 @@ const reply = async () => {
 
                         const w = await masto.v1.statuses.create({
                 status: response,
-                visibility: "private" //private for testing posts
+                visibility: "public" //private for testing posts
             });
             console.log(w.url);
 
@@ -94,6 +94,6 @@ const reply = async () => {
     }
 }
 makeStatus();
-//post a status every 10 seconds
-setInterval(makeStatus,10000);
+//post a status every 30 min 0 seconds
+setInterval(makeStatus,1800000);
 reply();
