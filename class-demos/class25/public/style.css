@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: bisque;
+    padding: 20px;
+}
+
+a, a:visited {
+    color: black;
+}
+
+.account-form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.content {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.content-new-post {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
+
+.content-new-post > form {
+    display: flex;
+    flex-direction: column;
+}

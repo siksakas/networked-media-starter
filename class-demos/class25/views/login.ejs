@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <%- include('nav.ejs') %>
+    <div class="content">
+      <a href="/register">Dont have an account?</a>
+      <form method="POST" action="/authenticate" class="account-form">
+        <input type="text" name="username" />
+        <input type="password" name="pass" />
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Make POST</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <%- include('nav.ejs') %>
+    <div class="content-new-post">
+      <form method="POST" action="/new-post" enctype="multipart/form-data">
+        <input type="text" name="caption" placeholder="write a caption" />
+        <div class="inputCtrl">
+          <input type="file" name="myupload" />
+          <input type="submit" value="upload an image" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

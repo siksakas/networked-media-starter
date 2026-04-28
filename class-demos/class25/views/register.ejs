@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>rerereregister</title>
+  </head>
+  <body>
+    <%- include('nav.ejs') %>
+    <div class="content">
+      <a href="/login">Already have an account?</a>
+      <form method="POST" action="/register" class="account-form">
+        <input type="text" name="username" placeholder="username" />
+        <input type="password" name="pass" placeholder="password" />
+        <input type="submit" value="Register" />
+      </form>
+    </div>
+  </body>
+</html>
