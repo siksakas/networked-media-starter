@@ -8,6 +8,11 @@
 </head>
 <body>
     <%- include('nav.ejs') %>
-    <div id="sketch1"></div>
+    <% for(let post of serverData){ %>
+        <span><%= post.date %></span>
+        <div class="individual-post">
+            <%= post.caption %>
+        </div>
+    <% } %>
 </body>
 </html>

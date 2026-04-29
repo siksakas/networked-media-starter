@@ -59,9 +59,26 @@ app.get('/', (req, res) => {
 
 app.post('/new-post', upload.single('myupload'), (req, res) => {
     console.log(req.body);
-    console.log(req.file); 
+    console.log(req.file);
+    let currentDate = new Date(Date.now()).toLocaleDateString();
+    let dataToBeStored = {
+        caption: req.body.caption,
+        date: currentDate,
+    }
+
+    if (req.file) {
+        dataToBeStored.file = req.file.filename;
+    }
+    database.insert(dataToBeStored)
     res.redirect('/'); //redirect to home page after we make a post, we can also redirect to a page with all the posts
 })
+
+//new as of class 26
+app.get('/all-posts', (req, res) => {
+    database.find({}, (err, allPosts) => {
+        res.render('all-posts.ejs', { serverData: allPosts });
+    });
+});
 
 app.post('/register', async (req, res) => {
     // encrypt the password before we store it in the database
@@ -89,12 +106,12 @@ app.post('/authenticate', (req, res) => {
         } else {
             let encryptedPassword = req.body.pass;
             //compare the password we have with the encrypted password in the database
-            if (bcrypt.compareSync(req.body.pass,foundUser.password)){
+            if (bcrypt.compareSync(req.body.pass, foundUser.password)) {
                 let session = req.session;
                 session.loggedInUser = foundUser.username;
                 res.redirect('/');
             } else {
-                response.redirect('/login?password=invalid')
+                res.redirect('/login?password=invalid');
             }
         }
     })

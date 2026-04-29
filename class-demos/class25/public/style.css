@@ -43,3 +43,13 @@ a, a:visited {
     display: flex;
     flex-direction: column;
 }
+.individual-post {
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}   
