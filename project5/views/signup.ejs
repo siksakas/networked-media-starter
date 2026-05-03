@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main style="max-width:420px;margin:2rem auto;display:grid;gap:1rem;">
+      <h1>Create account</h1>
+      <form method="post" action="/register" style="display:grid;gap:.5rem;">
+        <input name="username" placeholder="Username" required minlength="3" />
+        <input name="pass" type="password" placeholder="Password" required minlength="6" />
+        <button type="submit">Sign up</button>
+      </form>
+      <a href="/login">Already have an account?</a>
+    </main>
+  </body>
+</html>

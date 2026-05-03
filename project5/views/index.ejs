@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script src="/js/game.js" defer></script>
+  <body>
+
+    <!-- left panel -->
+    <div id="main-area">
+      <div id="left-panel">
+        <div class="panel-header">PEOPLE AND WISHES</div>
+        <div id="action-list"></div>
+        <div id="faith-bar-wrap">
+          <div class="bar-label">FAITH<span id="faith-val">0</span>/100</div>
+          <div class="bar-track">
+            <div
+              class="bar-fill"
+              id="faith-bar"
+              style="background: #8855cc; width: 0%"
+            ></div>
+          </div>
+        </div>
+        <div id="divider-h"></div>
+      </div>
+      <!-- middle map area -->
+      <div id="map-wrap">
+        <canvas id="map-canvas"></canvas>
+        <div id="wish-popup" class="wish-popup hidden" aria-live="polite">
+          <div class="wish-popup-inner">
+            <button id="wish-popup-close" class="wish-popup-close" type="button" aria-label="Close wish dialog">X</button>
+            <img id="wish-popup-sprite" class="wish-popup-sprite" src="" alt="Follower sprite" />
+            <div id="wish-popup-text" class="wish-popup-text"></div>
+            <div class="wish-popup-actions">
+              <button id="wish-accept" class="wish-decision wish-accept" type="button">Accept</button>
+              <button id="wish-reject" class="wish-decision wish-reject" type="button">Reject</button>
+            </div>
+          </div>
+        </div>
+        <div id="trait-popup" class="wish-popup hidden" aria-live="polite">
+          <div class="wish-popup-inner">
+            <button id="trait-popup-close" class="wish-popup-close" type="button" aria-label="Close trait dialog">X</button>
+            <img id="trait-popup-sprite" class="wish-popup-sprite" src="" alt="Follower sprite" />
+            <div id="trait-popup-text" class="wish-popup-text"></div>
+          </div>
+        </div>
+      </div>
+      <!-- right panel -->
+      <div id="right-panel">
+        <div id="account-controls">
+          <% if (loggedInUser) { %>
+            <div class="account-row">Logged in as <strong><%= loggedInUser %></strong></div>
+            <div class="account-actions">
+              <button id="load-game-btn" type="button">Load</button>
+              <button id="save-game-btn" type="button">Save</button>
+              <form method="post" action="/logout" style="display:inline;"><button type="submit">Logout</button></form>
+            </div>
+            <span id="save-game-status" aria-live="polite"></span>
+          <% } else { %>
+            <div class="account-actions">
+              <a href="/login-page">Login</a>
+              <a href="/signup-page">Sign up</a>
+            </div>
+          <% } %>
+        </div>
+        <div class="panel-header">HISTORY</div>
+        <div id="event-log">
+          <div class="log-entry divine">The PLAYER has returned!</div>
+          
+        </div>
+        <div id="divider-h"></div>
+      </div>
+    </div>
+  </body>
+</html>
